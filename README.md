@@ -1,2 +1,2 @@
 # FlaskSimpleChatServer
-Toy store website using python flask micro-framework.
+Chatting webapp using python flask micro-framework and SocketIO.
