@@ -9,14 +9,17 @@ app.debug = True
 app.config['SECRET_KEY'] = 'nuttertools'
 socketio = SocketIO(app)
 
+"""function for http:domain/"""
 @app.route('/')
 def chat():
   return render_template('chat.html')
 
+"""function for http:domain/login"""
 @app.route('/login')
 def login():
   return render_template('login.html')
 
+"""function for send message data in json format to socket"""
 @socketio.on('message', namespace='/chat')
 def chat_message(message):
   print("message = ", message)
