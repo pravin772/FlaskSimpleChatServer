@@ -25,6 +25,7 @@ def chat_message(message):
   print("message = ", message)
   emit('message', {'data': message['data']}, broadcast=True)
 
+"""function for test connection"""
 @socketio.on('connect', namespace='/chat')
 def test_connect():
   emit('my response', {'data': 'Connected', 'count': 0})
